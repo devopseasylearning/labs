@@ -22,8 +22,7 @@ elif [ $osname == "amzn" ]; then
 
   clear
   echo "No ansible installation found -- proceeding with ansible installation..."
-  sudo yum install -y epel-release
-  sudo yum install -y ansible  
+  sudo amazon-linux-extras install ansible2  
   echo "`ansible --version | head -1` installed Successfully"
 
 elif [ $1 == "centos" ];then
