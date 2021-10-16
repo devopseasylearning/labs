@@ -2,11 +2,11 @@
 
 	useradd ansible -m -d /home/ansible -s /bin/bash
 
-### add user to sudoers for root previliges  on all machines ( all targets )
+### add user to sudoers for root previliges  on all machines ( controller & all targets)
 
 	echo -e 'ansible  ALL=(ALL)  NOPASSWD:  ALL' > /etc/sudoers.d/ansible
 
-### genereate ssh keys for above user on contrller machine 
+### genereate ssh keys for above user on contrller (master only) machine 
 
 ```
 	1) switch to user ( su - ansible )
