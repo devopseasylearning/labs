@@ -13,14 +13,14 @@
 	2) run "ssh-keygen" command as user ( this will genereate ssh keys for the user ) 
 ```
 ```
-        on ansible controller machine
+        on ansible controller machine (master only)
 		cd /home/ansible/.ssh 
 		cat id_rsa.pub (copy the content)
 ```
 ### copy user ssh keys from ansible contrller to all target hosts
 
 ```
-	1) on all target machines
+	1) on all target machines (slave only)
 		   swith to the user ( su - ansible)
 		   mkdir -p /home/ansible/.ssh
 		   touch /home/ansible/.ssh/authorized_keys
