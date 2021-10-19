@@ -73,6 +73,18 @@
      repo_gpgcheck=1
      gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
      EOF
+     
+        yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+     systemctl enable --now kubelet
+     
+     
+     
+     
+     
+     
+     
+     
+     
 ###################################
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -85,8 +97,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 exclude=kubelet kubeadm kubectl
 EOF
 ####################################################
-     yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-     systemctl enable --now kubelet
+  
 
 ### Step2: `On Master only:`
 
